@@ -8,5 +8,5 @@
  */
 int main(void)
 {
-	printf("Size = %lu", sizeof(size_t));
+	printf("int*");
 }
