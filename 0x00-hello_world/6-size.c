@@ -14,10 +14,10 @@ int main(void)
 	long long int llint;
 	float fl;
 
-	printf("char %lu", sizeof(char));
-	printf("int %lu", sizeof(int));
-	printf("long int %lu", sizeof(lint));
-	printf("long long int %lu", sizeof(llint));
-	printf("float %lu", sizeof(fl));
+	printf("char %lu\n", sizeof(char));
+	printf("int %lu\n", sizeof(int));
+	printf("long int %lu\n", sizeof(lint));
+	printf("long long int %lu\n", sizeof(llint));
+	printf("float %lu\n", sizeof(fl));
 	return (0);
 }
