@@ -14,7 +14,7 @@ int main(void)
 	long long int llint;
 	float fl;
 
-	printf("char", sizeof(char));
+	printf("char %lu", sizeof(char));
 	printf("int", sizeof(int));
 	printf("long int", sizeof(lint));
 	printf("long long int", sizeof(llint));
