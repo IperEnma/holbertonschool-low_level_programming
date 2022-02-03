@@ -8,6 +8,6 @@
  */
 int main(void)
 {
-	printf(int*);
+	printf("%i",int*);
 	return (0);
 }
