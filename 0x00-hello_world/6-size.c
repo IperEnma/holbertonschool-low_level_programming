@@ -8,6 +8,16 @@
  */
 int main(void)
 {
-	printf("%i",int*);
+	char tipochar;
+	int ent;
+	long int lint;
+	long long int llint;
+	float fl;
+
+	printf("char", sizeof(char);
+	printf("int", sizeof(int));
+	printf("long int", sizeof(lint));
+	printf("long long int", sizeof(llint));
+	printf("float", sizeof(fl));
 	return (0);
 }
