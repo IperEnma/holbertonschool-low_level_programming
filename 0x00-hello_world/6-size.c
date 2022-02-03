@@ -9,4 +9,5 @@
 int main(void)
 {
 	printf(int*);
+	return (0);
 }
