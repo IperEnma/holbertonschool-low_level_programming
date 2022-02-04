@@ -6,7 +6,7 @@
  * description: numbers
  *
  */
-int main (void)
+int main(void)
 {
 	int a;
 
