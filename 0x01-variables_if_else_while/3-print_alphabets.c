@@ -8,15 +8,13 @@
   */
 int main(void)
 {
-		char lt = 'a';
 
-		for (lt <= 'z'; lt++)
+		for (lt = 'a'; c <= 'z'; lt++)
 		{
 			putchar(lt);
 		}
-		char ltm = 'A';
 
-		for (ltm <= 'Z'; ltm++)
+		for (ltm = 'A'; ltm <= 'Z'; ltm++)
 		{
 			putchar(ltm);
 		}
