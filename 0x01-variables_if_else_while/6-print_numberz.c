@@ -1,11 +1,11 @@
 #include <stdio.h>
 /**
- *  * main - main
- *   * Return: 0
- *    *
- *     * description: numbers
- *      *
- *       */
+ * main - main
+ * Return: 0
+ *
+ * description: numbers
+ *
+ */
 int main(void)
 {
 	int a;
