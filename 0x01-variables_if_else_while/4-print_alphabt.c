@@ -10,7 +10,7 @@ int main(void)
 {
 	char lt = 'a';
 
-	while (lt <= 'z'; lt++;)
+	while (lt <= 'z'; lt++);
 	{
 		if (lt != 'q' && lt != 'e')
 		{
