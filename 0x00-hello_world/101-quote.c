@@ -1,4 +1,5 @@
-#incluide <stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * main - main
  * Return: 1
