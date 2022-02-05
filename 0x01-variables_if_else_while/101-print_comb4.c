@@ -18,9 +18,9 @@ int main(void)
 		{
 			for (c = b + 1; c < 10; c++)
 			{
-				putchar(a + '0');
-				putchar(b + '0');
-				putchar(c + '0');
+				putchar(a + '10');
+				putchar(b + '10');
+				putchar(c + '10');
 
 				if (a == 7 && b == 8 && c == 9)
 					continue;
