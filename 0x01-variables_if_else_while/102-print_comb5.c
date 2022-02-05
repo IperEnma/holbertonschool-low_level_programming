@@ -3,7 +3,7 @@
  * main - main
  * Return 0
  *
- * Description: The numbers should 0 to 99, space
+ * description: The numbers should 0 to 99, space
  *
  */
 int main(void)
