@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - main
- * Return 0
+ * Return: 0
  *
  * description: The numbers should 0 to 99, space
  *
