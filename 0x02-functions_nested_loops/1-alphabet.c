@@ -1,4 +1,3 @@
-#include "_putchar.c"
 #include "main.h"
 /**
  * main - main
@@ -7,7 +6,13 @@
  * description: numbers
  *
  */
-int main(void)
+void print_alphabet(void)
 {
-void print_alphabet(void);
+	char a;
+	for (a = 'a'; a <= 'z'; a++)
+	{
+		_putchar(a);
+	}
+	putchar('\n');
+	return (0);
 }
