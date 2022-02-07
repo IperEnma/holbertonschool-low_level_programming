@@ -1,14 +1,12 @@
 #include "main.h"
 /**
- * main - main
+ * print_alphabet - prototype print alphabet
  * Return: 0
- *
- * description: numbers
- *
  */
 void print_alphabet(void)
 {
 	char a;
+
 	for (a = 'a'; a <= 'z'; a++)
 	{
 		_putchar(a);
