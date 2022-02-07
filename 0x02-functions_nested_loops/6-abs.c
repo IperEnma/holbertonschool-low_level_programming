@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * int _abs - calculate absolute value
- * @int: character check
+ * _abs - calculate absolute value
+ * @r: character check
  * Return: 1 sucess or 0 in fail
  */
 int _abs(int r)
