@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <unistd.h>
 /**
  * main - main
  * Return: 0
@@ -6,12 +6,9 @@
  * description: printf putchar
  *
  */
-int main(void)
+int _putchar(char c)
 {
-	char caracter = 'a';
+	return (write(1, &c, 1));
 
-	putchar(caracter);
-	putchar('\n');
-	return (0);
 
 }
