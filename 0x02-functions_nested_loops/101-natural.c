@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_times_table - prints the 9 times table
- * @n: table
- * Return: 1 sucess or 0 in fail
+ * main - main
+ * nothing void
+ * Return: 0
  */
-int main()
-{	
+int main(void)
+{
 	unsigned long int a, sum;
 	unsigned long int n = 0, m = 0;
 
