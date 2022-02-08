@@ -1,4 +1,5 @@
-#
+#include <stdio.h>
+#include <main.h>
 /**
  * print_times_table - prints the 9 times table
  * @n: table
@@ -6,7 +7,6 @@
  */
 int main()
 {	
-	int a;
 	unsigned long int a, sum;
 	unsigned long int n = 0, m = 0;
 
@@ -19,5 +19,3 @@ int main()
 	printf("%lu\n", sum);
 	return (0);
 }
-
-
