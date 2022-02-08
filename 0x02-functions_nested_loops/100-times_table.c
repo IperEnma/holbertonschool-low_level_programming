@@ -1,13 +1,14 @@
 #include "main.h"
 /**
- * times_table - prints the 9 times table
- * nothign void function
+ * print_times_table - prints the 9 times table
+ * @n: table
  * Return: 1 sucess or 0 in fail
  */
 void print_times_table(int n)
 {
 	int a, b, m;
-	if (n > 15 || n < 0)
+
+	it f(n > 15 || n < 0)
 	return;
 	for (a = 0; a <= n ; a++)
 	{
