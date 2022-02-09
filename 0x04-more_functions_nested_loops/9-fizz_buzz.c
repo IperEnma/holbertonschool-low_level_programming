@@ -30,6 +30,10 @@ void main(void)
 			printf("%d", a);
 			printf(" ");
 		}
+		if (a == 100)
+		{
+			continue;
+		}
 	}
 	printf("\n");
 }
