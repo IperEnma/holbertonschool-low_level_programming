@@ -10,7 +10,7 @@ void print_line(int n)
 
 	if (n > 0)
 	{
-		for (; c <= n; c++)
+		for (; c < n; c++)
 		{
 			_putchar('_');
 		}
