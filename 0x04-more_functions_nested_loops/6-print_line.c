@@ -12,7 +12,7 @@ void print_line(int n)
 	{
 		for (; c <= n; c++)
 		{
-			_putchar('-');
+			_putchar('_');
 		}
 	}
 	_putchar('\n');
