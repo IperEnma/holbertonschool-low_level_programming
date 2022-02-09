@@ -2,9 +2,9 @@
 /**
  * main - program that prints the numbers
  * void nothing
- * Return nothing
+ * Return: 0
  */
-void main(void)
+int main(void)
 {
 	int a;
 
@@ -36,4 +36,5 @@ void main(void)
 		}
 	}
 	printf("\n");
+	return (0);
 }
