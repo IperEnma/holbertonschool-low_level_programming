@@ -1,16 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
- 
-int main()
+/**
+ * main - prime factor
+ * void function
+ * Return: 0
+ */
+int main(void)
 {
 	long long int i, resultado;
 	long long int MAX = 600851475143;
 	int num;
- 
- 	for( i = 2; i < MAX; i++)
+
+	for (i = 2; i < MAX; i++)
 	{
- 		if(MAX % i == 0)
- 		{
+		if (MAX % i == 0)
+		{
 		MAX /= i;
 		i = 2;
 		}
