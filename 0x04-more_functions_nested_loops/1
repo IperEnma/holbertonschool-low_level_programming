@@ -5,20 +5,19 @@
  * void function
  * Return: 0
  */
-int main(void)
+int main()
 {
 	int long a;
 	int long n = 612852475143;
 
-	for (a = 2; a < n; a++)
+	for (a=2; a < n; a++)
 	{
 		if (n % a == 0)
 		{
 			n = n / a;
 		}
 	}
-	printf("%lu", n);
-	printf("\n");
+	printf("%d", n);
 	return (0);
 
 }
