@@ -8,7 +8,7 @@
 int main(void)
 {
 	long long int i, resultado;
-	long long int MAX = 600851475143;
+	long long int MAX = 612852475143;
 	int num;
 
 	for (i = 2; i < MAX; i++)
