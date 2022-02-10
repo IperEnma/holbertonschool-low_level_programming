@@ -7,17 +7,14 @@
  */
 int main(void)
 {
-	long long int i, resultado;
-	long long int MAX = 612852475143;
-	int num;
+	int a = 2;
 
-	for (i = 2; i < MAX; i++)
+	for (a = 2; a < n; a++)
 	{
-		if (MAX % i == 0)
+		if (n % a == 0)
 		{
-		MAX /= i;
-		i = 2;
+			n = n / a;
 		}
 	}
-	return (0);
+	printf("%d", n);
 }
