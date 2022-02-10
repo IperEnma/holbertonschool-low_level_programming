@@ -4,16 +4,18 @@
  * @n: value integer
  * Return
  */
-void print_number(long int n)
+void print_number(int n)
 {
+	unsigned int aux = n;
+
 	if (n < 0)
 	{
 		_putchar('-');
-		n *= -1;
+		aux *= -1;
 	}
-	if (n / 10)
+	if (aux / 10)
 	{
-		print_number(n / 10);
+		print_number(aux / 10);
 	}
-	_putchar (n % 10 + 48);
+	_putchar (aux % 10 + 48);
 }
