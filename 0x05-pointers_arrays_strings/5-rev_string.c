@@ -7,12 +7,17 @@
  */
 void rev_string(char *s)
 {
-	char *aux = s;
-	int i, j = 0;
+	int last = strlen(s) - 1;
+	char tmp;
+	int i = 0;
 
-	for (i = strlen(s) - 1; i >= 0; i--)
+	for (; s[i]; i++)
 	{
-		s[j] = aux[i];
-		j++;
+		if (i >= last)
+			break;
+		tmp = s[last];
+		s[last] = s[i];
+		s[i] = tmp;
+		last--;
 	}
 }
