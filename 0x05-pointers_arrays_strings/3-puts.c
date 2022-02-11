@@ -6,6 +6,11 @@
  */
 void _puts(char *str)
 {
-	puts(str);
-	printf("\n");
+	int i = 0;
+
+	for (i = 0; str[i]; i++)
+	{
+		putchar(str[i]);
+	}
+	putchar(10);
 }
