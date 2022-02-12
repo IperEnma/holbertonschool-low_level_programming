@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
  * print_array - function that prints n element
- * @a:
- * @n:
+ * @a: pointer
+ * @n:repetition
  * Return: pointer
  */
 void print_array(int *a, int n)
@@ -13,9 +13,9 @@ void print_array(int *a, int n)
 	{
 		printf("%d", a[i]);
 
-		if (i < n)
+		if (i < n -1)
 		{
-			printf(", ");
+			printf("%d, ", n);
 		}
 	}
 	printf("\n");
