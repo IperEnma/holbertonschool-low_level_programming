@@ -17,11 +17,13 @@ int _atoi(char *s)
 			if (s[i] >= '0' && s[i] <= '9')
 			{
 				ret = (ret * 10) + (s[i] - 48);
-					if (s[i] <= '0' && s[i] >= '9')
-					{
-						flag = 0;	
-					}
+				if (s[i] <= '0' && s[i] >= '9')
+				{
+					flag = 0;	
+				}
 			}
 		}
+		else
+			break;
  	return (ret);
 }
