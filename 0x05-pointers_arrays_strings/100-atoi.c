@@ -6,9 +6,9 @@
 int _atoi(char *s)
 {
 	int flag = 1;
-	int ret = 0;
+	int unsigned ret = 0;
 	int i = 0;
-	int si = 1;
+	int unsigned si = 1;
 
 	for (; s[i]; i++)
 		if (flag)
