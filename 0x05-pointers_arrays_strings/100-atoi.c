@@ -14,16 +14,20 @@ int _atoi(char *s)
 		if (flag)
 		{
 			if (s[i] == '-')
+			{
 				si = si * -1;
+			}
 			if (s[i] == '+')
+			{
 				si = si * 1;
+			}
 			if (s[i] >= '0' && s[i] <= '9')
 			{
 				ret = (ret * 10) + (s[i] - 48);
-			}
-			if (s[i] <= '0' && s[i] >= '9')
-			{
-				flag = 0;
+				if (s[i + 1] < '0' || s[i + 1] > '9')
+				{
+					flag = 0;
+				}
 			}
 		}
 		else
