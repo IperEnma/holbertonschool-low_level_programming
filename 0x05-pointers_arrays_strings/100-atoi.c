@@ -1,9 +1,7 @@
-/*^
+/**
  * _atoi - atoi
- * @flag: sfds
- * @ret: sdfdsf
- * @s: lkajsdsad
- * Return ret
+ * @s: pointer
+ * Return: ret
  */
 int _atoi(char *s)
 {
@@ -19,11 +17,11 @@ int _atoi(char *s)
 				ret = (ret * 10) + (s[i] - 48);
 				if (s[i] <= '0' && s[i] >= '9')
 				{
-					flag = 0;	
+					flag = 0;
 				}
 			}
 		}
 		else
 			break;
- 	return (ret);
+	return (ret);
 }
