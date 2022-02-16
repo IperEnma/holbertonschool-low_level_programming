@@ -1,7 +1,8 @@
 /**
- *
- *
- *
+ * reverse_array - reverses the content of an array of integers.
+ * @n: numbers string
+ * @a: strung
+ * Return: nothing
  */
 void reverse_array(int *a, int n)
 {
@@ -17,7 +18,6 @@ void reverse_array(int *a, int n)
 			break;
 
 		b--;
-		
 		e = a[i];
 		a[i] = a[b];
 		a[b] = e;
