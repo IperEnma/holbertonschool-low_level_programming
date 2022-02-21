@@ -34,9 +34,8 @@ char *_strpbrk(char *s, char *accept)
 		}
 		if (y || accept == 0)
 			p = s + si;
+		else
+			p = NULL;
 	}
-	else
-		p = NULL;
-
 	return (p);
 }
