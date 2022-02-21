@@ -26,10 +26,11 @@ char *_strpbrk(char *s, char *accept)
 				if (s[si] == accept[a])
 				{
 					y = 1;
-					si--;
 					break;
 				}
 			}
+			if (y)
+				break;
 		}
 		if (y || accept == 0)
 			p = s + si;
