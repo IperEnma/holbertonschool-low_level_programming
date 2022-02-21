@@ -1,8 +1,9 @@
 #include <stdio.h>
 /**
- *
- *
- *
+ * _strpbrk - Write a function that searches a string
+ * @s: original string
+ * @accept: coincidence
+ * Return: p
  */
 char *_strpbrk(char *s, char *accept)
 {
@@ -12,7 +13,7 @@ char *_strpbrk(char *s, char *accept)
 	char *p;
 
 	p = s;
-	
+
 	if (s != NULL)
 	{
 		for (si = 0; s[si]; si++)
@@ -20,7 +21,7 @@ char *_strpbrk(char *s, char *accept)
 			if (y == 1)
 				break;
 
-			for(a = 0; accept[a]; a++)
+			for (a = 0; accept[a]; a++)
 			{
 				if (s[si] == accept[a])
 				{
@@ -35,6 +36,6 @@ char *_strpbrk(char *s, char *accept)
 	}
 	else
 		p = NULL;
-	
+
 	return (p);
 }
