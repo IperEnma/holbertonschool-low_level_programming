@@ -24,7 +24,7 @@ char *_strchr(char *s, char c)
 			}
 		}
 
-		if (y || c == 0)
+		if (y || c == NULL)
 			p = s + si;
 		else
 		p = NULL;
