@@ -24,9 +24,12 @@ char *_strstr(char *haystack, char *needle)
 			haystack++;
 		else
 		{
-			return (haystack);
+		return (haystack);
 		}
 	}
+
+	if (needle == 0)
+		return(haystack);
 
 	return (haystack);
 }
