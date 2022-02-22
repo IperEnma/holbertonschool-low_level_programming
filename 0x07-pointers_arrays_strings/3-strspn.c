@@ -1,7 +1,8 @@
 /**
- *
- *
- *
+ * _strspn - function that gets the length of a prefix substring
+ * @s: string origin
+ * @accept: string coincidence
+ * Return: r
  */
 unsigned int _strspn(char *s, char *accept)
 {
@@ -11,10 +12,12 @@ unsigned int _strspn(char *s, char *accept)
 
 	for (; accept[a]; a++)
 	{
-		for (; s[si]; si++)
+		for (si = 0; s[si]; si++)
 		{
 			if (s[si] == accept[a])
 			r++;
+			if(s[si] == ',')
+				break;
 		}
 	}
 	return(r);
