@@ -13,7 +13,7 @@ char *_strstr(char *haystack, char *needle)
 	for (; needle[s] ;)
 		s++;
 
-	for (; haystack != NULL;)
+	for (; haystack != NULL && needle != NULL;)
 	{
 		for (i = 0; needle[i]; i++)
 		{
@@ -22,10 +22,6 @@ char *_strstr(char *haystack, char *needle)
 		}
 		if (i != s)
 			haystack++;
-		else if (needle == 0)
-		{
-		return (haystack);
-		}
 		else
 			return (haystack);
 	}
