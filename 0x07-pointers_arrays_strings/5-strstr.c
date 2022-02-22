@@ -22,14 +22,13 @@ char *_strstr(char *haystack, char *needle)
 		}
 		if (i != s)
 			haystack++;
-		else
+		else if (needle == 0)
 		{
 		return (haystack);
 		}
+		else
+			return (haystack);
 	}
-
-	if (needle == 0)
-		return(haystack);
 
 	return (haystack);
 }
