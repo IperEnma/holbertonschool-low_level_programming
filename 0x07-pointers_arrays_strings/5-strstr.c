@@ -12,8 +12,8 @@ char *_strstr(char *haystack, char *needle)
 
 	for (; needle[s] ;)
 		s++;
-
-	for (; haystack != NULL && needle != NULL;)
+	
+	for (; haystack != NULL && needle != 0;)
 	{
 		for (i = 0; needle[i]; i++)
 		{
