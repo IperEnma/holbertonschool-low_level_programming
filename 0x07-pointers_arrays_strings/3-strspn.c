@@ -16,9 +16,9 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (s[si] == accept[a])
 			r++;
-			if(s[si] == ',')
+			if (s[si] == ',')
 				break;
 		}
 	}
-	return(r);
+	return (r);
 }
