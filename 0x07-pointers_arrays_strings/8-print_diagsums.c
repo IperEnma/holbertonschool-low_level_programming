@@ -1,8 +1,9 @@
 #include <stdio.h>
 /**
- *
- *
- *
+ * print_diagsums - add matrix
+ * @a: matrix
+ * @size: matrix size
+ * Return: void
  */
 void print_diagsums(int *a, int size)
 {
@@ -19,8 +20,8 @@ void print_diagsums(int *a, int size)
 
 	for (; j < (size * size - 1);)
 	{
-		suma2= suma2 + a[j];
-		j = j + size - 1;	
+		suma2 = suma2 + a[j];
+		j = j + size - 1;
 	}
 
 	printf("%d, %d\n", suma1, suma2);
