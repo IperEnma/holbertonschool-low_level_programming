@@ -10,16 +10,20 @@ int main(int argc, char *argv[])
 {
 	int suma = 0;
 	int i = 1;
+	int j = 0;
 
 	if (argc < 1)
 		return (0);
 
 	for (i = 1; i < argc; i++)
 	{
-		if (!atoi(argv[i]))
-		{
-			printf("%s\n", "Error");
-			return (1);
+		for (j = 0; argv[i][j]; j ++)
+		{	
+			if ((argv[i][j]) < 48 || (argv[i][j]) > 57)
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
 		suma += atoi(argv[i]);
 	}
