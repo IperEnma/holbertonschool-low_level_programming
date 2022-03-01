@@ -11,10 +11,7 @@ int main(int argc, char *argv[])
 	int suma = 0;
 	int i = 1;
 	int j = 0;
-
-	if (argc < 1)
-		return (0);
-
+	
 	for (i = 1; i < argc; i++)
 	{
 		for (j = 0; argv[i][j]; j++)
