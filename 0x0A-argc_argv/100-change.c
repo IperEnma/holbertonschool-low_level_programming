@@ -21,19 +21,8 @@ int main(int argc, char *argv[])
 				change = cents / coins[i];
 					if (cents % coins[i] != 0)
 					{
-						res = cents % coins[i];
-						for (j = 0; coins[j]; j++)
-						{
-							if (res > coins[j])
-							{
-								change2 = res / coins[j];
-							if (res % coins[j] != 0)
-								change2 = change2 + (res % coins[i]);
-							}
-							break;
-						}
+						change = change + (cents % coins[i]);
 					}
-					else
 					break;
 			}
 		}
