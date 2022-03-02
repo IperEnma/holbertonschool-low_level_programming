@@ -1,8 +1,9 @@
 #include <stdlib.h>
 /**
- *
- *
- *
+ * free_grid - returns a pointer to a 2 dimensional array of integers
+ * @grid: arrays bidimensional
+ * @height: height
+ * Return: void
  */
 void free_grid(int **grid, int height)
 {
