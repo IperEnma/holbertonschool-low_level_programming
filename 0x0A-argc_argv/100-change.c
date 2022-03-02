@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, cents, change = 0;
+	int i, cents, change, change2, res = 0;
 	int coins[] = {25, 10, 5, 2, 1};
 
 	if (argc == 2)
@@ -21,10 +21,27 @@ int main(int argc, char *argv[])
 				change = cents / coins[i];
 					if (cents % coins[i] != 0)
 					{
-						change = change + (cents % coins[i]);
+						res = cents % coins[i];
 					}
 					break;
 			}
+		}
+		if (res != 0)
+		{
+		for (i = 0; coins[i]; i++)
+		{
+			if (res > coins[i])
+			{
+				change2 = res / coins[i];
+				if (res % coins[i] != 0)
+				{
+					change2 = change2 + (res % coins[i]);
+				}
+				change = change2 + change;
+				break;
+
+			}
+		}
 		}
 	}
 	else
