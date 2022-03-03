@@ -36,8 +36,7 @@ char *argstostr(int ac, char **av)
 				p[pi] = av[i][j];
 				pi++;
 			}
-			p[pi] = '\n';
-			pi++;
+			p[pi++] = '\n';
 		}
 	}
 	return (p);
