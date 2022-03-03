@@ -23,7 +23,7 @@ char *argstostr(int ac, char **av)
 			t++;
 		}
 	}
-	t = t + ac;
+	t += ac;
 
 	p = malloc(sizeof(char) * t + 1);
 
@@ -36,7 +36,8 @@ char *argstostr(int ac, char **av)
 				p[pi] = av[i][j];
 				pi++;
 			}
-			p[pi++] = '\n';
+			if (p[pi] == '\0')
+				p[pi++] = '\n';
 		}
 	}
 	return (p);
