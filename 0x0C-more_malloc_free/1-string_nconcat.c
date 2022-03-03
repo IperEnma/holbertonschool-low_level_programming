@@ -1,11 +1,11 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * string_nconcat - returned pointer shall point to a newly allocated space in memory
+ * string_nconcat - returned pointer shall point to a newly allocated
  * @s1: string 1
  * @s2: string 2
- * @n:
- * Return:
+ * @n: size
+ * Return: p
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -19,7 +19,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	s11 = strlen(s1);
 	s12 = strlen(s2);
-	if ( n >= s12)
+	if (n >= s12)
 		s12 = n;
 	p = malloc(s11 + s12 + 1);
 	if (p != NULL)
