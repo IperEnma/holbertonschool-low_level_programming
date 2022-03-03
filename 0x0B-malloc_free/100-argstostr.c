@@ -11,7 +11,7 @@
 char *argstostr(int ac, char **av)
 {
 	char *p = NULL;
-	int i, j, t, pi = 0;
+	int i = 0, j = 0, t = 0, pi = 0;
 
 
 	if (ac == 0 || av == NULL)
@@ -29,7 +29,7 @@ char *argstostr(int ac, char **av)
 
 	if (p == NULL)
 	{
-		return (NULL);
+		return (p);
 	}
 	for (i = 0; i < ac; i++)
 	{
@@ -38,7 +38,6 @@ char *argstostr(int ac, char **av)
 			p[pi] = av[i][j];
 			pi++;
 		}
-		if (p[pi] == '\0')
 			p[pi++] = '\n';
 	}	
 	return (p);
