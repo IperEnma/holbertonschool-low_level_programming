@@ -40,5 +40,5 @@ char *argstostr(int ac, char **av)
 			pi++;
 		}
 	}
-		return (p);
+	return (p);
 }
