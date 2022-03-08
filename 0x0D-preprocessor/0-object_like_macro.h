@@ -1,1 +1,1 @@
-#include SIZE 1023
+#define SIZE 1024
