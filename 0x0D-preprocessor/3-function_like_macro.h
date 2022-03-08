@@ -1,1 +1,5 @@
-#define ABS(x) (((x) < (0)) ? ((x) * (-1)) : ((x) * (1)))
+#ifndef MACRO
+#define MACRO
+#define ABS(x) ((x) < 0 ? (x) * -1 : (x) * 1)
+
+#endif
