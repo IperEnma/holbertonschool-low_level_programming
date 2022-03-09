@@ -23,12 +23,14 @@ int main(int argc, char *argv[])
 	{
 		printf("Error\n");
 		exit(99);
-	}
-
+	}	
+	if (argv[2][1] == NULL)
+	{
 	one = atoi(argv[1]);
 	two = atoi(argv[3]);
 
 	function.f = get_op_func(argv[2]);
 	printf("%d\n", function.f(one, two));
+	}
 	return (0);
 }
