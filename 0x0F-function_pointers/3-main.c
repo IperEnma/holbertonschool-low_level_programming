@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	if (argv[2][0] != '+' && argv[2][0] != '-' &&
 	argv[2][0] != '*' && argv[2][0] != '/' && argv[2][0] != '%')
 	{
-		printf("HOLA\n");
+		printf("ERROR\n");
 		exit(99);
 	}
 
