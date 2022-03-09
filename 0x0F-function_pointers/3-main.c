@@ -7,10 +7,8 @@
  * @argv: array
  * Return: void
  */
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-	int i = 0;
-	int r = 0;
 	int one = 0;
 	int two = 0;
 	op_t function;
@@ -32,4 +30,5 @@ void main(int argc, char *argv[])
 
 	function.f = get_op_func(argv[2]);
 	printf("%d\n", function.f(one, two));
+	return (0);
 }
