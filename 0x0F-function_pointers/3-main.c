@@ -28,6 +28,7 @@ int main(int argc, char *argv[])
 	two = atoi(argv[3]);
 
 	function.f = get_op_func(argv[2]);
+
 	printf("%d\n", function.f(one, two));
 
 	return (0);
