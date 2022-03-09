@@ -27,14 +27,8 @@ int main(int argc, char *argv[])
 	one = atoi(argv[1]);
 	two = atoi(argv[3]);
 
-	if (argv[2] == '/' || argv[2] == '%' && two == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
-
 	function.f = get_op_func(argv[2]);
 	printf("%d\n", function.f(one, two));
-	}
+
 	return (0);
 }
