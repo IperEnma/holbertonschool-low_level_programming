@@ -15,13 +15,13 @@ int main(int argc, char *argv[])
 
 	if (argc != 4)
 	{
-		printf("ERROR\n");
+		printf("Error\n");
 		exit(98);
 	}
 	if (argv[2][0] != '+' && argv[2][0] != '-' &&
 	argv[2][0] != '*' && argv[2][0] != '/' && argv[2][0] != '%')
 	{
-		printf("ERROR\n");
+		printf("Error\n");
 		exit(99);
 	}
 
