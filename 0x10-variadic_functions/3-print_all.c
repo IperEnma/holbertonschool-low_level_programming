@@ -2,14 +2,26 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <stddef.h>
+#include <string.h>
 /**
  * print_string - print string
  * @s: parameter
  * Return: void
  */
 void print_string(va_list s)
-{	if(s)
-		printf("%s", va_arg(s, char *));
+{
+	char *aux;
+
+	aux = va_arg(s, char *);
+
+	switch (aux[0])
+	{
+		case '\0':
+			printf("(nil)");
+			break;
+		default:
+			printf("%s", aux);
+	}
 }
 /**
  * print_integer - print integer
@@ -47,7 +59,8 @@ void print_float(va_list f)
  */
 void print_all(const char * const format, ...)
 {
-	int i = 0, j = 0;
+	int i = 0, str = 0;
+	int j = 0;
 	va_list p;
 
 	opp selector[] = {
@@ -58,6 +71,8 @@ void print_all(const char * const format, ...)
 		{NULL, NULL}
 	};
 
+	str = strlen(format) - 1;
+
 	va_start(p, format);
 
 	while (format[i])
@@ -66,11 +81,14 @@ void print_all(const char * const format, ...)
 		while (j < 4)
 		{
 			if (selector[j].c[0] == format[i])
+			{
 				selector[j].f(p);
+				if (i != str)
+					printf(", ");
+			}
 			j++;
 		}
 		i++;
-		printf(", ");
 	}
 	printf("\n");
 	va_end(p);
