@@ -39,7 +39,7 @@ void print_integer(va_list i)
  */
 void print_char(va_list c)
 {
-	printf("%c", (char) va_arg(list, int));
+	printf("%c", (char) va_arg(c, int));
 }
 /**
  * print_float - print float
