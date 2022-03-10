@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-    print_all("icfs", 1,'B', 3.555, "ihola");
+    print_all("icsss", 1,'B', "\0", "ihola");
     return (0);
 }

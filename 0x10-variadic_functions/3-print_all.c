@@ -30,7 +30,7 @@ void print_string(va_list s)
  */
 void print_integer(va_list i)
 {
-	printf("%d", va_arg(i, int));
+	printf("%c", (char) va_arg(list, int));
 }
 /**
  * print_char - print char
@@ -48,8 +48,7 @@ void print_char(va_list c)
  */
 void print_float(va_list f)
 {
-
-	printf("%f", va_arg(f, double));
+	printf("%f", (float) va_arg(list, double));
 }
 
 /**
