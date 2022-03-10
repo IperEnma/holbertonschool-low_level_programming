@@ -8,8 +8,8 @@
  * Return: void
  */
 void print_string(va_list s)
-{
-	printf("%s\n", va_arg(s, char *));
+{	if(s)
+		printf("%s", va_arg(s, char *));
 }
 /**
  * print_integer - print integer
@@ -18,7 +18,7 @@ void print_string(va_list s)
  */
 void print_integer(va_list i)
 {
-	printf("%d\n", va_arg(i, int));
+	printf("%d", va_arg(i, int));
 }
 /**
  * print_char - print char
@@ -27,7 +27,7 @@ void print_integer(va_list i)
  */
 void print_char(va_list c)
 {
-	printf("%c\n", va_arg(c, int));
+	printf("%c", va_arg(c, int));
 }
 /**
  * print_float - print float
@@ -37,7 +37,7 @@ void print_char(va_list c)
 void print_float(va_list f)
 {
 
-	printf("%f\n", va_arg(f, double));
+	printf("%f", va_arg(f, double));
 }
 
 /**
@@ -70,6 +70,8 @@ void print_all(const char * const format, ...)
 			j++;
 		}
 		i++;
+		printf(", ");
 	}
+	printf("\n");
 	va_end(p);
 }
