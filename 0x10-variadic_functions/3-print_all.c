@@ -9,19 +9,15 @@
  * Return: void
  */
 void print_string(va_list s)
-{
-	char *aux;
+{	
+	char *str = va_arg(s, char*);
 
-	aux = va_arg(s, char *);
-
-switch (aux[0])
+	while (str != NULL)
 	{
-		case '\0':
-			printf("(nil)");
-			break;
-		default:
-			printf("%s", aux);
+		printf("%s", str);
+		return;
 	}
+	printf("(nil)");	
 }
 /**
  * print_integer - print integer
