@@ -14,7 +14,7 @@ void print_string(va_list s)
 
 	aux = va_arg(s, char *);
 
-	switch (aux[0])
+switch (aux[0])
 	{
 		case '\0':
 			printf("(nil)");
@@ -30,7 +30,7 @@ void print_string(va_list s)
  */
 void print_integer(va_list i)
 {
-	printf("%c", (char) va_arg(i, int));
+	printf("%d", va_arg(i, int));
 }
 /**
  * print_char - print char
@@ -39,7 +39,7 @@ void print_integer(va_list i)
  */
 void print_char(va_list c)
 {
-	printf("%c", va_arg(c, int));
+	printf("%c", (char) va_arg(list, int));
 }
 /**
  * print_float - print float
