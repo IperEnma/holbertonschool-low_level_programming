@@ -12,11 +12,10 @@ void print_string(va_list s)
 {	
 	char *aux = va_arg(s, char*);
 
-	switch (aux != 	NULL)
-	{
-	default:
+	if (aux == NULL)
+		printf("(nil)");
+	else
 		printf("%s", aux);
-	}
 }
 /**
  * print_integer - print integer
@@ -53,8 +52,9 @@ void print_float(va_list f)
  */
 void print_all(const char * const format, ...)
 {
-	int i = 0, str = 0;
+	int i = 0;
 	int j = 0;
+	char *empty = "", *comma = ", ";
 	va_list p;
 
 	opp selector[] = {
@@ -65,20 +65,18 @@ void print_all(const char * const format, ...)
 		{NULL, NULL}
 	};
 
-	str = strlen(format) - 1;
-
 	va_start(p, format);
 
-	while (format[i])
+	while (format != NULL && format[i] != '\0')
 	{
 		j = 0;
-		while (j < 4)
+		while (selector[j].c != NULL)
 		{
 			if (selector[j].c[0] == format[i])
 			{
+				printf("%s", empty);
 				selector[j].f(p);
-				if (i != str)
-					printf(", ");
+				empty = comma;
 			}
 			j++;
 		}
