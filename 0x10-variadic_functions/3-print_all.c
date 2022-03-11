@@ -9,7 +9,7 @@
  * Return: void
  */
 void print_string(va_list s)
-{	
+{
 	char *aux = va_arg(s, char*);
 
 	if (aux == NULL)
