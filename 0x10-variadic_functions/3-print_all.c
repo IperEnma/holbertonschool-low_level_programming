@@ -10,14 +10,13 @@
  */
 void print_string(va_list s)
 {	
-	char *str = va_arg(s, char*);
+	char *aux = va_arg(s, char*);
 
-	while (str != NULL)
+	switch (aux != 	NULL)
 	{
-		printf("%s", str);
-		return;
+	default:
+		printf("%s", aux);
 	}
-	printf("(nil)");	
 }
 /**
  * print_integer - print integer
