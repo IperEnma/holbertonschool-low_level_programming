@@ -13,9 +13,11 @@ void print_string(va_list s)
 	char *aux = va_arg(s, char*);
 
 	if (aux == NULL)
+	{
 		printf("(nil)");
-	else
-		printf("%s", aux);
+		return;
+	}
+	printf("%s", aux);
 }
 /**
  * print_integer - print integer
