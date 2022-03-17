@@ -9,9 +9,9 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	char *s;
 	list_t *headaux = *head;
-	list_t *newL;
+	list_t *new;
 
-	if (stri == NULL)
+	if (str == NULL)
 		return (NULL);
 
 	s = strdup(str);
