@@ -9,14 +9,13 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	char *s;
 	list_t *headaux = *head;
-	list_t *new;
+	list_t *new = NULL;
 
 	s = strdup(str);
 
 	new = malloc(sizeof(list_t));
 	if (!head)
 	{
-		printf("NULL");
 		return(new);
 	}
 
