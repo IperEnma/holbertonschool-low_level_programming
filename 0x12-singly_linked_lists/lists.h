@@ -1,5 +1,11 @@
 #ifndef NODOS
 #define NODOS
+/**
+ * struct Node - struct
+ * @str: string
+ * @len: size
+ * @next: next node
+ */
 typedef struct Node
 {	char *str;
 	int len;
