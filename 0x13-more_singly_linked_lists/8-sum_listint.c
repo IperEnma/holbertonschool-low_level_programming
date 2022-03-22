@@ -10,7 +10,7 @@ int sum_listint(listint_t *head)
 
 	listint_t *aux = head;
 
-	if ((*head).next == NULL)
+	if (!head)
 		return (0);
 
 	for (; aux;)

@@ -1,8 +1,8 @@
 #include "lists.h"
 /**
- *
- *
- *
+ * pop_listint - deletes the head node
+ * @head: head npde
+ * Return: ret
  */
 int pop_listint(listint_t **head)
 {
@@ -16,5 +16,5 @@ int pop_listint(listint_t **head)
 	ret = aux->n;
 	free(aux);
 
-	return(ret);
+	return (ret);
 }
