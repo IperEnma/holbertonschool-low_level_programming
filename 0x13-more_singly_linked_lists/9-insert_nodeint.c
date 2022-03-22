@@ -21,21 +21,14 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		*head = new;
 		return (new);
 	}
-	while (auxp)
+	for (i = 0; i < (idx - 1); i++)
 	{
-		if (i == idx - 1)
-		{
-			new->next = auxp->next;
-			auxp->next = new;
-		}
+		if (!auxp || !(auxp->next))
+					return (NULL);
 		auxp = auxp->next;
-		i++;
 	}
-
-	if (i > idx)
-	{
-		free(new);
-		return (NULL);
-	}
+	
+	new->next = auxp->next;
+	auxp->next = new;
 	return (new);
 }
