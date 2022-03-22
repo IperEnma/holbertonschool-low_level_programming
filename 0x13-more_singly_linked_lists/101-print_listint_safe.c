@@ -6,15 +6,13 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *aux = head;
+	size_t i;
 
-	printf("[%p] %d\n", (void *)head, head->n);
-	if (head->next)
-		return(1 + print_listint_safe(head->next));
-	else
+	for (i = 0; head; i++)
 	{
-		return (1);
+		printf("[%p] %d\n", (void *)head, head->n);
+		head = head->next;
 	}
 
-	return (0);
+	return (i);
 }
