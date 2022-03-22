@@ -9,7 +9,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	unsigned int i = 0;
 	listint_t *aux = *head;
-	listint_t *tofree, *connect;
+	listint_t *tofree;
 
 	if ((*head) ==  NULL)
 		return (-1);
@@ -27,12 +27,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		aux = aux->next;
 	}
 	tofree = aux->next;
-	if (tofree->next != NULL)
-	{
-		connect = tofree->next;
-		aux->next = connect;
-		free(tofree);
-	}
-
+	aux->next = tofree->next;
+	free(tofree);
 	return (1);
 }
