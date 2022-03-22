@@ -33,10 +33,6 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		aux->next = connect;
 		free(tofree);
 	}
-	else
-	{
-		free(*head);
-	}
 
 	return (1);
 }
