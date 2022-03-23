@@ -8,7 +8,7 @@ listint_t *find_listint_loop(listint_t *head)
 {
 	listint_t *slow = head, *fast = head;
 
-	if (head == NULL || head->next == NULL)
+	if (head == NULL)
 		return (NULL);
 
 	slow = slow->next;
@@ -20,7 +20,7 @@ listint_t *find_listint_loop(listint_t *head)
 		{
 			slow = head;
 
-			for (; fast;)
+			for (; fast != hare;)
 			{
 				slow = slow->next;
 				fast = fast->next;
