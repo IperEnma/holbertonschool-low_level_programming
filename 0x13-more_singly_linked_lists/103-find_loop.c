@@ -1,8 +1,8 @@
 #include "lists.h"
 /**
- *
- *
- *
+ * find_listint_loop - finds the loop in a linked list
+ * @head: head node
+ * Return: slow or null
  */
 listint_t *find_listint_loop(listint_t *head)
 {
@@ -24,10 +24,10 @@ listint_t *find_listint_loop(listint_t *head)
 			{
 				slow = slow->next;
 				fast = fast->next;
-				
+
 				if (slow == fast)
 					return (slow);
-			}	
+			}
 		}
 	}
 
