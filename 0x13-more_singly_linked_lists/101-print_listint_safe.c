@@ -1,5 +1,40 @@
 #include "lists.h"
 /**
+ * find_listint_loop - finds the loop in a linked list
+ * @head: head node
+ * Return: slow or null
+ */
+size_t print_listint_safe(const listint_t *head)
+{        
+
+	listint_t *slow = head, *fast = head;
+
+        if (head == NULL)
+                return (NULL);
+
+        slow = slow->next;
+        fast = fast->next->next;
+
+        for (; fast;)
+        {
+                if (fast == slow)
+                {
+                        slow = head;
+
+                        for (; slow != fast;)
+                        {
+                                slow = slow->next;
+                                fast = fast->next;
+                        }
+                        return (slow);
+                }
+                slow = slow->next;
+                fast = fast->next->next;
+        }
+
+        return (NULL);
+}
+/**
  * print_listint_safe - that prints a listint_t linked list
  * @head: head node
  * Return: i
