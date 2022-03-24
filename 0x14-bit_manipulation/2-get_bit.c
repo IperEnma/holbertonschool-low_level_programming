@@ -2,11 +2,12 @@
 /**
  * get_bit - value of a bit at a given index
  * @index: index
- * Return: 
+ * @n: decimal
+ * Return: 1 or 0 or -1
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	if (!n || n < 0 || !index)
+	if (!n || !index)
 		return (-1);
 	n = n >> index;
 	if ((n & 1) == 0)
