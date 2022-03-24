@@ -1,6 +1,6 @@
 #include <stddef.h>
 /**
- * binary_to_unit - binary number to an unsigned int
+ * binary_to_uint - binary number to an unsigned int
  * @b: binary
  * Return: decimal or 0
  */
