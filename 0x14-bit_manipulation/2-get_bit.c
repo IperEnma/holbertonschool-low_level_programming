@@ -6,7 +6,9 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	n = n >> 2;
+	if (!n)
+		return (-1);
+	n = n >> index;
 	if ((n & 1) == 0)
 		return (0);
 	else
