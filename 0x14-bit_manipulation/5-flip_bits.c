@@ -13,7 +13,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 	while (bed)
 	{
-		bed = bed & (bed - 1);
+		bed = bed &  (bed - 1);
 		count++;
 	}
 	return (count);
