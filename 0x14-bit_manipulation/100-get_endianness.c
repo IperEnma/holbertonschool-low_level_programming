@@ -1,7 +1,7 @@
 /**
+ * get_endianness - checks the endianness
  *
- *
- *
+ * Return: 1 little indian or 0 big indian
  */
 int get_endianness(void)
 {
