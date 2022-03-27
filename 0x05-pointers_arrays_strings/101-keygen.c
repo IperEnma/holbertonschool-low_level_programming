@@ -13,6 +13,8 @@ int main()
 	int a = 0, i = 0, s = 0, count = 0;
 	srand(time(NULL));
 
+	while (s != 2772)
+	{
 	while ((2772 - 122) > count)
 	{
 		s = rand() % 62;
@@ -30,6 +32,7 @@ int main()
 			break;
 		}
 		a++;
+	}
 	}
 	pass[i] = '\0';
 	printf ("%s", pass);
