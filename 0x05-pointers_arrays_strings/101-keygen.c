@@ -8,14 +8,15 @@
 int main()
 
 {
-	char pass[100];
+	char pass[58];
 	char aux[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	int a = 0, i = 0, count = 0, s = 0;
+	int a = 0, i = 0, s = 0, count = 0;
 	srand(time(NULL));
+
 	while ((2772 - 122) > count)
 	{
 		s = rand() % 62;
-		pass[i] = s;
+		pass[i] = aux[s];
 		count += pass[i];
 		i++;
 	}
