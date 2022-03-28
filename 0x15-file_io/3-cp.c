@@ -24,7 +24,7 @@ void closing(int n)
  */
 int main(int argc, char *argv[])
 {
-	static char buffer[1024];
+	char buffer[1024];
 	int sd = 0, sf = 0, s = 1024, d = 0;
 
 	if (argc != 3)
