@@ -47,6 +47,11 @@ int main(int argc, char *argv[])
 	while (s == 1024)
 	{
 		s = read(sf, buffer, 1024);
+		if (s == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
 		d = write(sd, buffer, s);
 		if (d == -1)
 		{
