@@ -23,7 +23,7 @@ int create_file(const char *filename, char *text_content)
 
 	if (check == -1)
 	{
-		write(STDOUT_FILENO, "fail\n", 5);
+		write(STDOUT_FILENO, "fail", 5);
 		return (-1);
 	}
 
