@@ -63,5 +63,5 @@ int main(int argc, char *argv[])
 	}
 	closing(sf);
 	closing(sd);
-	return (1);
+	return (0);
 }
