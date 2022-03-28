@@ -41,7 +41,6 @@ int main(int argc, char *argv[])
 	sd = open(argv[2], O_TRUNC | O_CREAT | O_WRONLY, 0664);
 	if (sd == -1)
 	{
-		closing(sf);
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
