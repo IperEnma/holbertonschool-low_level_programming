@@ -1,0 +1,45 @@
+#include "main.h"
+/**
+ * main - copy a file to another
+ * @argc: source file
+ * @argv: destine file
+ * Return: int
+ */
+int main(int argc, char *argv[])
+{
+	static char buffer[1024];
+	int sd = 0, sf = 0, s = 1024, d = 0;
+
+	if (argc != 3)
+	{
+		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", argv[0]);
+		exit(97);
+	}
+	if (!argv[1])
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
+	sf = open(argv[1], O_RDONLY);
+	sd = open(argv[2], O_CREAT | O_RDWR, 0664);
+	if (sf == -1)
+		return (-1);
+	if (sd == -1)
+	{
+		close(sf);
+		return (-1);
+	}
+	while (s == 1024)
+	{
+		s = read(sf, buffer, 1024);
+		d = write(sd, buffer, s);
+		if (d == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
+			exit(99);
+		}
+	}
+	close(sf);
+	close(sd);
+	return (1);
+}
