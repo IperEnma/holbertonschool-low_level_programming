@@ -40,11 +40,16 @@ int main(int argc, char *argv[])
 	sf = open(argv[1], O_RDONLY);
 	sd = open(argv[2], O_CREAT | O_RDWR, 0664);
 	if (sf == -1)
-		return (-1);
+	{
+		closing(sf);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[1]);
+		exit(98);
+	}
 	if (sd == -1)
 	{
-		close(sf);
-		return (-1);
+		closing(sf);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
 	}
 	while (s == 1024)
 	{
@@ -58,6 +63,5 @@ int main(int argc, char *argv[])
 	}
 	closing(sf);
 	closing(sd);
-
 	return (1);
 }
