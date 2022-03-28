@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
 		d = write(sd, buffer, s);
 		if (d == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 	}
