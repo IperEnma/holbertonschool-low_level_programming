@@ -1,5 +1,22 @@
 #include "main.h"
 /**
+ * closing - close function
+ * @n: as a file handler
+ * Return: int
+ */
+void closing(int n)
+{
+	int v = 0;
+
+	v = close(n);
+	if (v == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", n);
+		exit(100);
+	}
+}
+
+/**
  * main - copy a file to another
  * @argc: source file
  * @argv: destine file
@@ -12,7 +29,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", argv[0]);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	if (!argv[1])
@@ -39,7 +56,8 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 	}
-	close(sf);
-	close(sd);
+	closing(sf);
+	closing(sd);
+
 	return (1);
 }
