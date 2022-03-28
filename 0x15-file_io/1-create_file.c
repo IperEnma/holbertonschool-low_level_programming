@@ -23,11 +23,11 @@ int create_file(const char *filename, char *text_content)
 	n = strlen(text_content);
 	check = write(fd, text_content, n);
 
-	if (check == -1)
+	/* if (check == -1)
 	{
 		write(STDOUT_FILENO, "fail\n", 5);
 		return (-1);
-	}
+	}*/
 
 	return (1);
 }
