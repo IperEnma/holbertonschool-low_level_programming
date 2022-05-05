@@ -28,11 +28,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *new, *aux;
 	unsigned int len = 0;
 	
-	if (idx != 0 && *h == NULL)
+	len = lenlist(h);
+	if ((idx != 0 && *h == NULL) || idx > len)
 		return (NULL);
 	if (idx == 0)
 		return (add_dnodeint(h, n));
-	len = lenlist(h);
 	if (idx == len)
 		return (add_dnodeint_end(h, n));
 
