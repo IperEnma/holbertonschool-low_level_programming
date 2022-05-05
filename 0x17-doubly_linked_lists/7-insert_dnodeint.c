@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- *
- *
+ * lenlist - len of list
+ * @h: header of list
+ * Return: i
  */
 unsigned int lenlist(dlistint_t **h)
 {
@@ -27,7 +28,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new, *aux;
 	unsigned int len = 0;
-	
+
 	len = lenlist(h);
 	if ((idx != 0 && *h == NULL) || idx > len)
 		return (NULL);
