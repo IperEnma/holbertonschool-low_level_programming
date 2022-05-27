@@ -1,52 +1,43 @@
 #include "hash_tables.h"
 /**
- *
- *
- *
+ * hash_table_set - add o update key
+ * @ht: hash table
+ * @key: key
+ * @value: value to key
+ * Return: 0 fail or 1 sucess
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
+	hash_node_t *aux = NULL;
 	hash_node_t *new = NULL;
-	unsigned long int index = 0;
+	char *valor = NULL;
+	unsigned int index = 0;
 
 	if (strlen(key) == 0)
 		return (0);
 
-	index = key_index((unsigned char *)key, ht->size);
-	
-	printf("SET\n========================\n");
-	if (ht->array[index] == NULL)
-	{
-		new = malloc(sizeof(hash_node_t));
-		new->key = strdup(key);
-		new->value = strdup(value);
-		ht->array[index] = new;
-		printf("ht->array: %s\n", ht->array[index]->key);
-		return (1);
-	}
-	else
-	{
-		while(ht->array[index])
-		{
-			printf("ESTOY EN WL HILE\n");
-			printf("ht->array[index]->key: %s\n", ht->array[index]->key);
-			printf("key: %s\n", key);
-			if (ht->array[index]->key == key)
-			{
-				printf("SI ES IGUAL\n");
-				/*free(ht->array[index]->value);*/
-				ht->array[index]->value = strdup(value);
-				return (1);
-			}
-			/*ht->array[index] = ht->array[index]->next;*/
-		}
-		new = malloc(sizeof(hash_node_t));
-		new->key = strdup(key);
-		new->value = strdup(value);
-		new->next = ht->array[index];
-		ht->array[index] = new;
-		return (1);
-	}
+	index = key_index((const unsigned char *)key, ht->size);
 
-	return (0);
+	aux = ht->array[index];
+	while (aux)
+	{
+		if (strcmp(aux->key, key) == 0)
+		{
+			valor = strdup(value);
+			if (valor == NULL)
+				return (0);
+			free(aux->value);
+			aux->value = valor;
+			return (1);
+		}
+		aux = aux->next;
+	}
+	new = malloc(sizeof(hash_node_t));
+	if (new == NULL)
+		return (0);
+	new->key = strdup(key);
+	new->value = strdup(value);
+	new->next = ht->array[index];
+	ht->array[index] = new;
+	return (1);
 }
