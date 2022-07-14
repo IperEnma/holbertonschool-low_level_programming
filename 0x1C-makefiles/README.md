@@ -1,7 +1,3 @@
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=iperenma&label=Profile%20views&color=0e75b6&style=flat" alt="iperenma" /> </p>
-<p align="left">
-</p>
-
 makefiles
 General
 - What are make, Makefiles
