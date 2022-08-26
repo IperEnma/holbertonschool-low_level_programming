@@ -22,7 +22,6 @@ void print_arr(int *array, size_t init, size_t end)
  */
 size_t aux(int *array, size_t init, size_t end, int value)
 {
-	size_t ret = 0;
 	size_t middle = 0;
 	size_t diference = 0;
 	
