@@ -49,7 +49,7 @@ size_t aux(int *array, size_t init, size_t end, int value)
 		return (aux(array, init, middle - 1, value));
 }
 /**
- * bianry_search - binary search
+ * binary_search - binary search
  * @array: array
  * @size: size of array
  * @value: value search
