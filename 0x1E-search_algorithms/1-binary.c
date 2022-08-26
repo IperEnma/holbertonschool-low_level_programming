@@ -1,7 +1,10 @@
 #include <stdio.h>
 /**
- *
- *
+ * print_arr - print array
+ * @array: array
+ * @init: first value
+ * @end: last value
+ * Return: -1 if fail or index
  */
 void print_arr(int *array, size_t init, size_t end)
 {
@@ -17,18 +20,22 @@ void print_arr(int *array, size_t init, size_t end)
 	printf("%i\n", array[init]);
 }
 /**
- *
- *
+ * aux - aux recursion
+ * @array: array
+ * @init: first value
+ * @end: last value
+ * @value: value search
+ * Return: -1 if fail or index
  */
 size_t aux(int *array, size_t init, size_t end, int value)
 {
 	size_t middle = 0;
 	size_t diference = 0;
-	
+
 	diference = end - init;
 	diference = diference / 2;
 	middle = init +  diference;
-	
+
 	if (array == NULL)
 		return (-1);
 	print_arr(array, init, end);
@@ -46,7 +53,7 @@ size_t aux(int *array, size_t init, size_t end, int value)
  * @array: array
  * @size: size of array
  * @value: value search
- * Return: 1 if fail or index
+ * Return: -1 if fail or index
  */
 int binary_search(int *array, size_t size, int value)
 {
