@@ -1,7 +1,10 @@
 #include <stdio.h>
 /**
- *
- *
+ * linear_search - search value in array
+ * @array: array
+ * @size: size of array
+ * @value: value search
+ * Return: index or -1 if fail
  */
 int linear_search(int *array, size_t size, int value)
 {
