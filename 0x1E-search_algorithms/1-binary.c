@@ -35,7 +35,7 @@ size_t aux(int *array, size_t init, size_t end, int value)
 	diference = end - init;
 	diference = diference / 2;
 	middle = init +  diference;
-	printf("middle= %li\n", middle);
+	
 	if (array == NULL)
 		return (-1);
 	print_arr(array, init, end);
