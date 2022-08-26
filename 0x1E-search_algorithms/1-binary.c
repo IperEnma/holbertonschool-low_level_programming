@@ -39,10 +39,10 @@ size_t aux(int *array, size_t init, size_t end, int value)
 	if (array == NULL)
 		return (-1);
 	print_arr(array, init, end);
-	if (end == init)
-		return (-1);
 	if (value == array[init])
 		return (init);
+	if (end == init)
+		return (-1);
 	if (value > array[(middle)])
 		return (aux(array, middle + 1, end, value));
 	else
